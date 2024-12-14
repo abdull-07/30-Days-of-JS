@@ -13,14 +13,38 @@ const tempBg = document.querySelectorAll(".temp")
 // const tempBg2 = document.querySelector(".tempt")
 const image = document.querySelector("#img")
 const description = document.querySelector(".desc")
+const errorMessage = document.querySelector("#error-message");
+const left = document.getElementsByClassName("data1")[0];
+const error = document.querySelector("#error-message")
+const rightBottom = document.getElementsByClassName("weather")[0];
 
 
+// Add `.display` class on page load/reload
+window.onload = () => {
+    left.classList.add("display")
+    rightBottom.classList.add("display")
+    error.classList.add("display")
+}
 
 const getWeather = async (city) => {
     try {
+
         const response = await fetch(`${apiURL}&q=${city}&&appid=${apiKey}`)
+        
+        // Check if the response is not OK (e.g., city not found)
+        if (!response.ok) {
+            throw new Error("City not found");
+        }
+        
         const data = await response.json()
         console.log(data)
+
+        // Remove `.display` from left and rightBottom if the city is found
+        left.classList.remove("display");
+        rightBottom.classList.remove("display");
+        error.classList.add("display");
+
+
         cityName.innerText = data.name
         temp.innerText = Math.round(data.main.temp)
         temp2.innerText = Math.round(data.main.temp)
@@ -58,18 +82,24 @@ const getWeather = async (city) => {
             image.src = "images/foggy.png";
         } else if (data.weather[0].description === "smoke") { // Corrected to "smoky"
             image.src = "images/smoke.png";
-        }else if (data.weather[0].description === "broken clouds") {
+        } else if (data.weather[0].description === "broken clouds") {
             image.src = "images/broken.png";
-        }else if (data.weather[0].description === "overcast clouds") {
+        } else if (data.weather[0].description === "overcast clouds") {
             image.src = "images/clouds.png";
-        }else if (data.weather[0].description === "haze") {
+        } else if (data.weather[0].description === "haze") {
             image.src = "images/haze.png";
         } else {
             image.src = "images/unknown.png"; // Handle unknown weather
         }
 
     } catch (error) {
-        console.error(error)
+        console.error(error);
+
+        // Show error and hide weather data
+        error.classList.remove("display");
+        left.classList.add("display");
+        rightBottom.classList.add("display");
+        errorMessage.innerText = "Not Found";
     }
 }
 

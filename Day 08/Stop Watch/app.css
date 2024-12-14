@@ -1,0 +1,99 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 10px;
+}
+
+.cont {
+    background-image: url("https://images.unsplash.com/photo-1483728642387-6c3bdd6c93e5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2076&q=80");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    align-content: center;
+    justify-items: center;
+}
+
+.card {
+    background-image: url("spring-time-background.jpg");
+    background-position: inherit;
+    color: white;
+    height: 8vw;
+    max-height: 180px;
+    min-height: 200px;
+    min-width: 180px;
+    box-shadow: 5px 5px 10px;
+    width: calc(100% / 2);
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 2em;
+    padding: 20px;
+    flex-direction: column;
+}
+
+/* .buttons{
+    margin: 20px;
+}
+
+.control-btn{
+    padding: 5px;
+    background: white;
+    cursor: pointer;
+    border: 2px solid white;
+    border-radius: 50%;
+} */
+
+/* General styles for control buttons */
+.control-btn {
+    display: inline-flex; /* Align icon and center it */
+    align-items: center;
+    justify-content: center;
+    width: 60px; /* Adjust width to your preference */
+    height: 60px; /* Adjust height to your preference */
+    background-color: #f5f5f5; /* Light gray background */
+    border: 2px solid #ddd; /* Border for better visibility */
+    border-radius: 50%; /* Circular shape */
+    cursor: pointer;
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Icon styling */
+.control-btn svg {
+    width: 36px; /* Uniform icon size */
+    height: 36px;
+    fill: none; /* Keep SVG background transparent */
+    color: #333; /* Default icon color */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+/* Hover effect */
+.control-btn:hover {
+    background-color: #e0e0e0; /* Slightly darker gray on hover */
+    border-color: #bbb; /* Darker border on hover */
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+.control-btn:hover svg {
+    color: #007BFF; /* Change icon color to blue on hover */
+}
+
+/* Active/Pressed state */
+.control-btn:active {
+    transform: scale(0.95); /* Slight shrink effect on click */
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.15); /* Subtle shadow reduction */
+}
+
+/* Additional spacing for buttons if needed */
+.control-btn + .control-btn {
+    margin-left: 10px; /* Space between buttons */
+}

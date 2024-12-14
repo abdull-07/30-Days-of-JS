@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400..700&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Pinyon+Script&family=Reem+Kufi+Fun:wght@400..700&family=Reem+Kufi:wght@400..700&family=Scheherazade+New:wght@400;500;600;700&display=swap');
+
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: "Pinyon Script", cursive;
+    background-color:#99ffda;
+background-image:
+radial-gradient(at 73% 51%, hsla(48,96%,65%,1) 0px, transparent 50%),
+radial-gradient(at 10% 82%, hsla(51,73%,79%,1) 0px, transparent 50%),
+radial-gradient(at 86% 20%, hsla(209,70%,68%,1) 0px, transparent 50%),
+radial-gradient(at 40% 78%, hsla(331,77%,68%,1) 0px, transparent 50%),
+radial-gradient(at 80% 20%, hsla(301,84%,78%,1) 0px, transparent 50%),
+radial-gradient(at 27% 0%, hsla(10,60%,66%,1) 0px, transparent 50%),
+radial-gradient(at 38% 88%, hsla(336,81%,63%,1) 0px, transparent 50%);
+    width: 100vw;
+    height: 100vh;
+    background-repeat: no-repeat;
+}
+
+.cont {
+    width: 99%;
+    height: 99%;
+    margin: auto;
+    /* border: 2px solid black; */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+h1 {
+    padding: 10px 0px;
+}
+
+.hadit {
+    width: 40%;
+    height: auto;
+    /* border: 2px solid; */
+    box-shadow: 3px 2px 5px 0px, inset -2px -3px 5px 0px, inset 2px 3px 10px 0px, -3px -2px 5px 0px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.hadit img {
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    margin-top: -60px;
+    box-shadow: 0px -2px 10px 0px;
+}
+
+.trans img {
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    margin-top: -60px;
+    box-shadow: 0px -2px 10px 0px;
+}
+
+.heading {
+    display: flex;
+    justify-content: space-around;
+    font-family: "Markazi Text", serif;
+    font-size: large;
+}
+
+.number,
+.name {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    padding: 15px 10px;
+    width: 30%;
+    box-shadow: 2px 2px 5px 0px;
+    border-radius: 10px;
+}
+
+#hadith-display,
+#trans-display {
+    padding: 10px 10px;
+    align-content: center;
+    /* font-family: "Noto Nastaliq Urdu", serif; */
+}
+
+#hadith-display {
+    /* font-family: "Noto Nastaliq Urdu", serif; */
+    /* font-family: "Reem Kufi", serif; */
+    /* font-family: "Noto Sans", serif; */
+    font-family: "Reem Kufi Fun", serif
+}
+
+.buttons {
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.update-btn,
+.share-btn {
+    border: none;
+    padding: 10px;
+    width: 30%;
+    border-radius: 20px;
+    box-shadow: 2px 3px 5px 0px
+}
+
+.update-btn:hover,
+.share-btn:hover{
+    box-shadow: inset 3px 5px 0px
+}

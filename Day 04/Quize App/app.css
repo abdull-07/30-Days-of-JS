@@ -1,0 +1,212 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.cont {
+    border: 2px solid;
+    width: 50vw;
+    /* width: 50%; */
+    margin: 50px auto;
+    border-radius: 20px;
+    height: 100%;
+    background-color: rgba(150, 200, 150, 0.603);
+    box-shadow: 10px 10px 10px .5px, inset -10px -10px 10px #b99999;
+}
+
+.heading{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 20px;
+    border: 2px solid;
+    width: 90%;
+    margin: 10px auto;
+    background-color: yellow;
+}
+
+.message-cont {
+    padding: 10px;
+    border-radius: 20px;
+    border: 2px solid;
+    width: 90%;
+    margin: 10px auto;
+    background-color: yellow;
+}
+ .message-cont div{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+ }
+
+.quiz {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+}
+
+#answers {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.answer {
+    border: 2px solid;
+    padding: 10px;
+    width: 90%;
+    border-radius: 10px;
+    margin: 10px auto;
+    cursor: pointer;
+}
+
+.answer:hover {
+    color: white;
+    background-color: cadetblue;
+    /* background-color: #8faa8f; */
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 50px auto;
+    width: 80%;
+}
+
+.btn {
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    width: 15%;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    cursor: pointer;
+    background-color: transparent;
+    box-shadow: 3px 4px 2px black;
+}
+
+.btn:hover{
+    /* width: 20%; */
+    background: transparent;
+    box-shadow: inset 3px 4px 2px darkslategray, 3px 4px 10px gray;
+}
+
+#final-score{
+    text-align: center;
+    padding: 10px;
+}
+
+.display{
+    display: none;
+}
+/* Default styles for larger screens are already defined above */
+
+/* For large tablets and small desktops (width ≤ 1024px) */
+@media screen and (max-width: 1024px) {
+    .cont {
+        width: 70vw;
+        height: auto;
+        margin: 30px auto;
+    }
+
+    .heading {
+        width: 95%;
+        margin: 15px auto;
+    }
+
+    .qa {
+        width: 95%;
+    }
+
+    .btn {
+        width: 20%;
+    }
+}
+
+/* For tablets (width ≤ 768px) */
+@media screen and (max-width: 768px) {
+    .cont {
+        width: 80vw;
+        height: auto;
+        margin: 20px auto;
+    }
+
+    .heading h1 {
+        font-size: 1.8rem;
+    }
+
+    .qa {
+        padding: 8px;
+        font-size: 1rem;
+    }
+
+    .btn {
+        width: 25%;
+    }
+
+    .buttons {
+        gap: 10px;
+    }
+}
+
+/* For mobile devices (width ≤ 480px) */
+@media screen and (max-width: 480px) {
+    .cont {
+        width: 90vw;
+        height: auto;
+        padding-bottom: 20px;
+    }
+
+    .heading h1 {
+        font-size: 1.5rem;
+    }
+
+    .quiz {
+        padding: 10px;
+    }
+
+    .qa {
+        padding: 6px;
+        font-size: 0.9rem;
+    }
+
+    .btn {
+        width: 50%;
+        padding: 8px;
+    }
+
+    .buttons {
+        gap: 15px;
+    }
+}
+
+/* For very small devices (width ≤ 320px) */
+@media screen and (max-width: 320px) {
+    .cont {
+        width: 95vw;
+        height: auto;
+        margin: 10px auto;
+    }
+
+    .heading h1 {
+        font-size: 1.2rem;
+    }
+
+    .qa {
+        padding: 5px;
+        font-size: 0.8rem;
+    }
+
+    .btn {
+        width: 70%;
+        padding: 6px;
+    }
+
+    .buttons {
+        gap: 10px;
+    }
+}

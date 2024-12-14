@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes App</title>
+    <link rel="stylesheet" href="app.css">
+</head>
+
+<body>
+    <div class="app-container">
+        <div class="head">
+            <!-- Title -->
+            <h1 class="app-title">NotesApp</h1>
+
+            <!-- Search bar -->
+            <div class="search-bar">
+                <input type="text" placeholder="Search..." />
+            </div>
+
+            <!-- Note input area -->
+            <div class="note-container">
+                <textarea placeholder="Enter your note here..." class="note-input"></textarea>
+                <div class="note-controls">
+                    <!-- Color options -->
+                    <div class="color-picker" id="color-picker">
+                        <div class="color-circle pink"></div>
+                        <div class="color-circle purple"></div>
+                        <div class="color-circle blue"></div>
+                        <div class="color-circle yellow"></div>
+                        <div class="color-circle green"></div>
+                    </div>
+                    <!-- Add button -->
+                    <button class="add-note-btn">ADD</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="list">
+            <!-- <div class="show-container"> -->
+                <!-- <textarea class="note-show"></textarea> -->
+                <!-- <div class="note-controls"> -->
+                    <!-- Add button -->
+                    <!-- <button class="det-note-btn">Delete</button> -->
+                <!-- </div> -->
+            <!-- </div> -->
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

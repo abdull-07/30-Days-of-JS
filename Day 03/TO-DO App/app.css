@@ -1,0 +1,182 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.heading {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    margin: 10px auto;
+    justify-content: center;
+    border: 2px solid black;
+    width: 90%;
+    border-radius: 50px;
+    color: #009d9d;
+    text-align: center;
+    position: sticky;
+    top: 0px;
+}
+
+.cont {
+    border: 2px solid;
+    width: 50%;
+    margin: 40px auto;
+    max-height: 80vh;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: inset 10px 10px 10px 0px gray, 5px 5px 10px black;
+    overflow: auto;
+    background-color: darkseagreen;
+}
+
+.main{
+    position: sticky;
+    top: 0;
+    background: white;
+    z-index: 10000;
+    padding:  10px 0px;
+}
+
+.add-task, .show-task li {
+    width: 90%;
+    margin: auto;
+    padding: 10px 20px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+input[type="checkbox" i] {
+    width: 2em;
+    height: 2em;
+}
+
+.task-show, #add-task-input {
+    width: 80%;
+    padding: 10px;
+    border-radius: 30px;
+    border: 1px solid #ccc;
+}
+
+button {
+    padding: 10px;
+    border-radius: 50px;
+    width: 15%;
+    background-color: #009d9d;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #007575;
+}
+
+.line {
+    padding-top: 5px;
+}
+
+.round-checkbox {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid black;
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+}
+
+.round-checkbox:checked {
+    background-color: #02b4b4;
+}
+
+.round-checkbox:checked::after {
+    content: '✔';
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: 10px;
+    height: 10px;
+}
+
+/* Responsive Styling */
+@media (max-width: 1024px) {
+    .cont {
+        width: 70%;
+        height: auto;
+    }
+
+    #task {
+        width: 75%;
+    }
+
+    button {
+        width: 20%;
+    }
+}
+
+@media (max-width: 768px) {
+    .heading {
+        flex-direction: row;
+        gap: 5px;
+        padding: 10px 5px;
+    }
+
+    .cont {
+        width: 80%;
+    }
+
+    #task {
+        width: 70%;
+    }
+
+    button {
+        width: 25%;
+    }
+}
+
+@media (max-width: 480px) {
+    .cont {
+        width: 90%;
+        height: auto;
+    }
+
+    .heading {
+        font-size: 16px;
+    }
+
+    #task {
+        width: 65%;
+        font-size: 14px;
+    }
+
+    button {
+        width: 30%;
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .round-checkbox {
+        width: 15px;
+        height: 15px;
+    }
+
+    .round-checkbox:checked::after {
+        top: 3px;
+        left: 3px;
+        width: 8px;
+        height: 8px;
+    }
+}
